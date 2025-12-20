@@ -103,141 +103,112 @@ nav a:hover::after {
   cursor: pointer;
 }
 
+
 .hero {
-  background: url("/images/solars.jpg") no-repeat center center;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 100px 20px;
-  image-rendering: auto;
-}
+    background: url("/images/solar2.jpg") no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+  }
+  
+  .services {
+    padding: 80px 8%;
+    background: #ffffff;
+    position: relative;
+  }
+  
+  .services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#eaf5ef 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: 0.4;
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .service-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    background-color: #a7d67183;
+    cursor: pointer;
+  }
+  
+  .service-card i {
+    font-size: 45px;
+    color: #8bc34a;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #243424;
+  }
+  
+  .service-card p {
+    font-size: 15px;
+    color: #4f6f57;
+    line-height: 1.6;
+  }
+  
+  .service-cta {
+    background: #8bc34a;
+    color: #ffffff;
+    padding: 70px 20px;
+    text-align: center;
+  }
+  
+  .service-cta h2 {
+    font-size: 36px;
+  }
+  
+  .service-cta p {
+    font-size: 18px;
+    margin: 15px 0 25px;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #518517;
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background: #31520d;
+    color: white;
+  }
 
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 20px;
-}
-
-.promise-section {
-  padding: 40px 5%;
-  position: relative;
-  background: #ffffff;
-}
-
-.promise-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(#eaf5ef 1px, transparent 1px);
-  background-size: 18px 18px;
-  opacity: 0.4;
-}
-
-.promise-container {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.promise-image {
-  width: 50%;
-  border-radius: 30px;
-}
-.promise-image img {
-  width: 100%;
-  border-radius: 30px;
-}
-
-.promise-content {
-  width: 50%;
-}
-
-.promise-content h2 {
-  font-size: 32px;
-  color: #8bc34a;
-}
-
-.promise-text {
-  color: #4f6f57;
-  line-height: 1.7;
-}
-
-.elements {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px 30px;
-  margin: 20px 0;
-}
-
-.element {
-  color: #8bc34a;
-  font-size: 14px;
-}
-
-.promise-desc {
-  color: #4a5f4a;
-  line-height: 1.7;
-}
-
-.values {
-  background: #8bc34a;
-  color: #ffffff;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.values h2 {
-  font-size: 35px;
-}
-
-.values-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.value-box {
-  font-size: 20px;
-  padding: 15px 25px;
-  border-bottom: 3px solid #274c8a;
-}
-
-.mission-vision {
-  display: flex;
-  gap: 40px;
-  padding: 80px 10%;
-}
-
-.mission {
-  background: #8bc34a;
-  padding: 30px;
-  border-radius: 15px;
-  flex: 1;
-  color: white;
-}
-
-.mission i {
-  font-size: 40px;
-}
-
-.vision {
-  background: #274c8a;
-  color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  flex: 1;
-}
-.vision i {
-  font-size: 40px;
-}
 
 .footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -480,63 +451,22 @@ nav a:hover::after {
     font-weight: 600;
   }
 
-  @media (max-width: 992px) {
-    .hero h1 {
-      font-size: 34px;
-    }
-
-    .promise-container {
-      gap: 30px;
-    }
-  }
-
   .hero {
     padding: 70px 15px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
-  .promise-container {
-    flex-direction: column;
-  }
-
-  .promise-image,
-  .promise-content {
-    width: 100%;
-  }
-
-  .promise-content h2 {
-    font-size: 26px;
-  }
-
-  .values-grid {
-    gap: 20px;
-  }
-
-  .value-box {
-    font-size: 16px;
-  }
-
-  .mission-vision {
-    flex-direction: column;
-    padding: 60px 5%;
-  }
-}
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .promise-container {
-    gap: 30px;
-  }
 }
 
 @media (max-width: 992px) {
   .logo-img {
     width: 140px;
+  }
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -550,6 +480,12 @@ nav a:hover::after {
   }
 }
 
+@media (max-width: 600px) {
+    .services-container {
+      grid-template-columns: 1fr; 
+    }
+  }
+
 @media (max-width: 480px) {
   .logo-img {
     width: 100px;
@@ -557,18 +493,6 @@ nav a:hover::after {
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .promise-content h2 {
-    font-size: 22px;
-  }
-
-  .elements {
-    gap: 10px 15px;
-  }
-
   nav a {
     font-size: 12px;
     padding: 7px 14px;
